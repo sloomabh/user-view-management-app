@@ -1,0 +1,177 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin Admin",
+      "email": "admin@admin.com",
+      "mobile": "123-456-7890",
+      "password": "admin123",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "address": "123 Main St, Anytown, California, 90210, USA"
+    },
+    {
+      "id": "2",
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "mobile": "987-654-3210",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "address": "456 Elm St, Sometown, New York, 10001, USA"
+    },
+    {
+      "id": "3",
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "mobile": "555-123-4567",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "address": "789 Oak St, Othertown, Texas, 75001, USA"
+    },
+    {
+      "id": "4",
+      "name": "Eva Brown",
+      "email": "eva@example.com",
+      "mobile": "111-222-3333",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/women/4.jpg",
+      "address": "101 Pine St, Somewhere, Florida, 33001, USA"
+    },
+    {
+      "id": "5",
+      "name": "Charlie Davis",
+      "email": "charlie@example.com",
+      "mobile": "777-888-9999",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "address": "202 Maple St, Anyville, Ohio, 43001, USA"
+    },
+    {
+      "id": "6",
+      "name": "Sophie Wilson",
+      "email": "sophie@example.com",
+      "mobile": "444-555-6666",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/women/6.jpg",
+      "address": "303 Cedar St, Everytown, Illinois, 60001, USA"
+    },
+    {
+      "id": "7",
+      "name": "Daniel Miller",
+      "email": "daniel@example.com",
+      "mobile": "666-777-8888",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
+      "address": "404 Birch St, Nowheresville, Michigan, 48001, USA"
+    },
+    {
+      "id": "8",
+      "name": "Olivia Lee",
+      "email": "olivia@example.com",
+      "mobile": "222-333-4444",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/women/8.jpg",
+      "address": "505 Walnut St, Smalltown, Indiana, 46001, USA"
+    },
+    {
+      "id": "9",
+      "name": "Mia Clark",
+      "email": "mia@example.com",
+      "mobile": "888-999-0000",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/women/9.jpg",
+      "address": "606 Pineapple St, Otherplace, Georgia, 30001, USA"
+    },
+    {
+      "id": "10",
+      "name": "David Smith",
+      "email": "david@example.com",
+      "mobile": "999-000-1111",
+      "password": "user123",
+      "image": "https://randomuser.me/api/portraits/men/10.jpg",
+      "address": "707 Cherry St, Anothertown, Washington, 98001, USA"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "description": "Full access and administrative privileges."
+    },
+    {
+      "id": "2",
+      "name": "Editor",
+      "description": "Can create, modify, and delete content."
+    },
+    {
+      "id": "3",
+      "name": "User",
+      "description": "Standard user with basic access."
+    },
+    {
+      "id": "4",
+      "name": "Moderator",
+      "description": "Handles content moderation and user interactions."
+    },
+    {
+      "id": "5",
+      "name": "Viewer",
+      "description": "Limited to viewing content without modification rights."
+    },
+    {
+      "id": "6",
+      "name": "Contributor",
+      "description": "Contributes content but does not have full editing privileges."
+    },
+    {
+      "id": "7",
+      "name": "NotAssigned",
+      "description": "the user is not assigned to any role from the admin"
+    }
+  ],
+  "user_role": [
+    {
+      "userId": "1",
+      "roleId": "1"
+    },
+    {
+      "userId": "2",
+      "roleId": "2"
+    },
+    {
+      "userId": "3",
+      "roleId": "3"
+    },
+    {
+      "userId": "4",
+      "roleId": "4"
+    },
+    {
+      "userId": "5",
+      "roleId": "5"
+    },
+    {
+      "userId": "6",
+      "roleId": "6"
+    },
+    {
+      "userId": "7",
+      "roleId": "2"
+    },
+    {
+      "userId": "8",
+      "roleId": "1"
+    },
+    {
+      "userId": "8",
+      "roleId": "2"
+    },
+    {
+      "userId": "9",
+      "roleId": "3"
+    },
+    {
+      "userId": "10",
+      "roleId": "5"
+    }
+  ]
+}
