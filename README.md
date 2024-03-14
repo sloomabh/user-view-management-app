@@ -28,7 +28,7 @@ npm i
 npm run dev
 ```
 
-The project should now be running locally on your machine. Open a web browser and visit http://localhost:3000 to view the application.
+The project should now be running locally on your machine. Open a web browser and visit http://localhost:5173/ to view the application.
 
 ## Login
 
