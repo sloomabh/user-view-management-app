@@ -98,7 +98,7 @@ const Users = () => {
         const roleName = roles!.find(
           (role) => role.id === userRole.roleId
         )?.name;
-        return roleName || "UnAssined";
+        return roleName;
       });
 
       return {

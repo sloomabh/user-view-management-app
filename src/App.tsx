@@ -4,7 +4,8 @@ import Login from "./pages/Login";
 //import Forgotpassword from "./pages/Forgotpassword";
 import SignUp from "./pages/SignUp";
 import MainLayout from "./components/MainLayout";
-import Home from "./pages/Home";
+import AssignUser from "./pages/AssignUser";
+import AssignRole from "./pages/AssignRole";
 import Users from "./pages/Users";
 import ViewUser from "./pages/ViewUser";
 import AddEditUser from "./pages/AddEditUser";
@@ -27,7 +28,8 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
 
         <Route path="/home" element={<MainLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<AssignUser />} />
+          <Route path="assign-role" element={<AssignRole />} />
           <Route path="user-list" element={<Users />} />
           <Route path="user-list/:id" element={<ViewUser />} />
           <Route path="user/:id" element={<AddEditUser />} />

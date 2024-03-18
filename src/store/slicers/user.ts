@@ -21,10 +21,10 @@ const usersSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state, action) => {
-      const { name, email, mobile, address } = action.payload;
+      const { id, name, email, mobile, address } = action.payload;
 
       const newUser = {
-        id: nanoid(),
+        id,
         name,
         email,
         mobile,

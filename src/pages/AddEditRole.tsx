@@ -108,7 +108,7 @@ const AddEditRole = () => {
           <div className="flex justify-center">
             <Button
               type="submit"
-              text={getRoleId !== undefined ? "Edit User" : "Add User"}
+              text={getRoleId !== undefined ? "Edit Role" : "Add Role"}
               addClassName="w-1/4"
             />
           </div>

@@ -19,15 +19,18 @@ const userRoleSlice = createSlice({
       state.data = state.data.filter(
         (userRole) => userRole.userId !== action.payload
       );
+      localStorage.setItem("user_role", JSON.stringify(state.data));
     },
     deleteRoleUser: (state, action) => {
       state.data = state.data.filter(
         (roleUser) => roleUser.userId !== action.payload
       );
+      localStorage.setItem("user_role", JSON.stringify(state.data));
     },
     addUserRoles: (state, action) => {
       const { userId, roleId } = action.payload;
       state.data.push({ userId, roleId });
+      localStorage.setItem("user_role", JSON.stringify(state.data));
     },
     updateUserRoles(state, action) {
       const { userId, roleId } = action.payload;
@@ -40,6 +43,7 @@ const userRoleSlice = createSlice({
         // If not, add a new userRole
         state.data.push({ userId, roleId });
       }
+      localStorage.setItem("user_role", JSON.stringify(state.data));
     },
   },
 });

@@ -90,7 +90,7 @@ const Roles = () => {
         const userName = users!.find(
           (user) => user.id === userRole.userId
         )?.name;
-        return userName || "UnAssined";
+        return userName;
       });
       return {
         id,
@@ -100,7 +100,7 @@ const Roles = () => {
           <div className="flex flex-col">
             {userNames.length === 0 ? (
               <div className="bg-red-400 p-2 rounded-md mb-1 text-center">
-                UNASSIGNED
+                No one
               </div>
             ) : (
               userNames.map((userName, index) => (
@@ -116,20 +116,25 @@ const Roles = () => {
         ),
         action: (
           <>
-            <div className="flex flex-col sm:flex-row">
-              <Link to={`/home/role/${id}`} className="text-2xl text-blue-500">
-                <BiEdit className="inline-block align-text-bottom" />
-              </Link>
+            {id !== "7" && (
+              <div className="flex flex-col sm:flex-row">
+                <Link
+                  to={`/home/role/${id}`}
+                  className="text-2xl text-blue-500"
+                >
+                  <BiEdit className="inline-block align-text-bottom" />
+                </Link>
 
-              <button
-                className="ms-0 sm:ms-3 mt-3 sm:mt-0 text-2xl text-red-500 bg-transparent border-0"
-                onClick={() => {
-                  showModal(id);
-                }}
-              >
-                <AiFillDelete className="inline-block align-text-bottom" />
-              </button>
-            </div>
+                <button
+                  className="ms-0 sm:ms-3 mt-3 sm:mt-0 text-2xl text-red-500 bg-transparent border-0"
+                  onClick={() => {
+                    showModal(id);
+                  }}
+                >
+                  <AiFillDelete className="inline-block align-text-bottom" />
+                </button>
+              </div>
+            )}
           </>
         ),
       };

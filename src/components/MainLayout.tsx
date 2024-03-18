@@ -60,7 +60,12 @@ const MainLayout: React.FC = () => {
             {
               key: "",
               icon: <AiOutlineDashboard className="text-lg" />,
-              label: "Dashboard",
+              label: "Assign Users",
+            },
+            {
+              key: "assign-role",
+              icon: <AiOutlineDashboard className="text-lg" />,
+              label: "Assign Roles",
             },
             {
               key: "user-list",

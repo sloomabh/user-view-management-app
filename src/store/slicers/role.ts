@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { roles } from "../../db/dbn.json";
+import { roles as initialRols } from "../../db/dbn.json";
 import { Role } from "../../types/Role";
 import { nanoid } from "@reduxjs/toolkit";
+import loadFromLocalStorage from "../../utils/localStorageUtils";
 
 type roleSlicerType = {
   data?: Role[];
@@ -9,8 +10,7 @@ type roleSlicerType = {
 };
 
 const initialState: roleSlicerType = {
-  data: [...roles],
-  loading: false,
+  data: loadFromLocalStorage("roles", initialRols),
 };
 
 const rolesSlicer = createSlice({
@@ -25,6 +25,8 @@ const rolesSlicer = createSlice({
         description,
       };
       state.data?.push(newRole);
+      // Save state to localStorage
+      localStorage.setItem("roles", JSON.stringify(state.data));
     },
 
     updateRole: (state, action) => {
@@ -33,11 +35,13 @@ const rolesSlicer = createSlice({
       if (roleIndex !== -1) {
         state.data[roleIndex] = { ...state.data[roleIndex], ...updatedRole };
       }
+      localStorage.setItem("roles", JSON.stringify(state.data));
     },
 
     deleteRole: (state, action) => {
       const roleIdToDelete: string = action.payload;
       state.data = state.data?.filter((role) => role.id !== roleIdToDelete);
+      localStorage.setItem("roles", JSON.stringify(state.data));
     },
   },
 });

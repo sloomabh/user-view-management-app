@@ -8,8 +8,10 @@ import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { addUser, updateUser } from "../store/slicers/user";
+import { addUserRoles } from "../store/slicers/userRole";
 import { User } from "../types/User";
 import Button from "../components/common/Button";
+import { nanoid } from "@reduxjs/toolkit";
 
 const AddEditUser = () => {
   const dispatch = useAppDispatch();
@@ -57,7 +59,15 @@ const AddEditUser = () => {
     validationSchema: schema,
     onSubmit: (values) => {
       if (getUserId === undefined) {
-        dispatch(addUser(values));
+        const id = nanoid(); // Generate unique id
+        const defaultRoleId = "7"; //the id of NotAssigned role that will be taken as default for new user
+        const { name, email, mobile, address } = values;
+
+        // Dispatch addUser action to add user
+        dispatch(addUser({ id, name, email, mobile, address }));
+        // Dispatch addUserRoles action to add user role
+        dispatch(addUserRoles({ userId: id, roleId: defaultRoleId }));
+
         toast.success("User added successfully");
         setTimeout(() => {
           navigate("/home/user-list");
@@ -71,7 +81,7 @@ const AddEditUser = () => {
       }
     },
   });
-  console.log(formik.initialValues);
+
   return (
     <div>
       <h3 className="mb-4 text-2xl font-bold title">

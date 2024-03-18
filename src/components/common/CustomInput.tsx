@@ -33,7 +33,7 @@ const CustomInput = ({
     : error
       ? "border-red-500"
       : "border-[#A7A9AC]";
-  console.log(val);
+
   return (
     <div className="mt-3 my-5 space-y-2">
       <div className={"mb-6"}>
